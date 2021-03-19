@@ -1,0 +1,17 @@
+.h1{
+    text-align: center;
+    padding: 10%;
+}
+h1 {
+    color: #0c5100;
+}
+a {
+    color: white;
+    background-color: #0c5100;
+}
+a:hover {
+    text-decoration: none;
+    color: #0c5100;
+    background-color: white;
+    transition-duration: 3s;
+}

@@ -1,0 +1,85 @@
+<head>
+    <title>Contact Us : Best Health and Care Clinic : Chetan Herbals Delhi</title>
+</head>
+<section>
+    <div class="img">
+        <div class="bgcontact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text">
+                            <h2>About Chetan Hrebals</h2><hr>
+                            <p>We are India’s Most Popular Diabetes Clinic. It’s a caring endeavor founded by Mr. Chetan Gupta, with 3 Clinics in Delhi, we have already reached out to help 31,000 diabetics.<br><hr>Diabetes is a hassle-some disease. So we don’t want the added hassle of waiting for a doctor, going to a diagnostic centre, finding products in another place etc.<br><hr>At Chetan Herbals, we take the stress out of diabetes. We provide everything a diabetic might need, under one roof. Right from diagnosis to speaking to a dietician, educator, diabetologist. As a patient, you don’t have to keep going from pillar to post. So life is easy and convenient for the patient.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <h2>Enquiry Form</h2><hr>
+                            <form [formGroup]="enquiryForm" (ngSubmit)="enquiryForm.valid && onEnquirySubmit($event)" novalidate>
+                                <div class="form-container">
+                                    <mat-form-field>
+                                        <mat-label>Full Name</mat-label>
+                                        <input id="fullname" matInput formControlName="name" [(ngModel)]="enquiry.name" placeholder="Enter your full name" required>
+                                        <mat-error *ngIf="enquiryForm.get('name').hasError('required')">Full Name must be Required. </mat-error>
+                                    </mat-form-field><br>
+                                    <mat-form-field hintLabel="Max 10 characters">
+                                        <mat-label>Mobile Number</mat-label>
+                                        <input id="unumber" matInput formControlName="mobilenumber" [(ngModel)]="enquiry.mobilenumber" #input maxlength="10" placeholder="Enter Mobile Number" required>
+                                        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                                        <mat-error *ngIf="enquiryForm.get('mobilenumber').hasError('required')">Mobile Number must be Required. </mat-error>
+                                        <mat-error *ngIf="enquiryForm.get('mobilenumber').hasError('minlength')">Mobile Number must be 10 Digits. </mat-error>
+                                        <mat-error *ngIf="enquiryForm.get('mobilenumber').hasError('pattern')">Mobile Number must be Number. </mat-error>
+                                    </mat-form-field><br>
+                                    <mat-form-field>
+                                        <mat-label>Email Address</mat-label>
+                                        <input id="email" matInput formControlName="email" [(ngModel)]="enquiry.email" placeholder="Enter your email">
+                                        <mat-error *ngIf="enquiryForm.get('email').hasError('pattern')">Enter a valid Mail. </mat-error>
+                                    </mat-form-field><br>
+                                    <mat-form-field>
+                                        <mat-label>Enquiry Question</mat-label>
+                                        <textarea matInput formControlName="question" [(ngModel)]="enquiry.question" placeholder="Enter your Enquiry Question" required></textarea>
+                                        <mat-error *ngIf="enquiryForm.get('question').hasError('required')">Enquiry Question must be Required. </mat-error>
+                                    </mat-form-field><br><br>
+                                    <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!enquiryForm.valid">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid company">
+        <h1>Chetan Herbals Pvt. Ltd. New Delhi (INDIA)</h1>
+        <p><b>Helpline:</b> +91-9211166333, +91-9211166888 | <b>Email:</b> chetanherbals@gmail.com</p>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>(South Delhi Clinic)</h3>
+                <h5>CHETAN CLINIC (R)</h5>
+                <p><b>Address:</b> Chetan House, BF-16, Near Sibbal Cinema, Badarpur, New Delhi-110044</p>
+                <p><b>Timing:</b> Timing : 10 am to 8 pm (7 Days)</p>
+            </div>
+            <div class="col-md-3">
+                <h3>(Old Delhi Clinic)</h3>
+                <h5>CHETAN CLINIC (R)</h5>
+                <p><b>Address:</b> 3584, Netaji Subhash Marg Daryaganj, Near Golcha Cinema, Delhi-110002</p>
+                <p><b>Timing:</b> Timing : 10 am to 8 pm (7 Days)</p>
+            </div>
+            <div class="col-md-3">
+                <h3>(East Delhi Clinic)</h3>
+                <h5>CHETAN HERBALS </h5>
+                <p><b>Address:</b> F-50, First Floor, Gurudwara Road, Madhu Vihar, New Delhi – 110092</p>
+                <p><b>Timing:</b> Timing : 10 am to 8 pm (7 Days)</p>
+            </div>
+            <div class="col-md-3">
+                <h3>(Manufacture Unit)</h3>
+                <h5>CHETAN HERBALS (P) LTD.</h5>
+                <p><b>Address:</b> BE-1056, Plot No.12, Badkhal Extn., Faridabad(HR), Pin code-121001 </p>
+            </div>
+        </div>
+    </div>
+    <div class="row framemap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d448825.59083475114!2d77.303595!3d28.496108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa929ba02c3ac276e!2sChetan%20Clinic!5e0!3m2!1sen!2sus!4v1576140634700!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+</section>

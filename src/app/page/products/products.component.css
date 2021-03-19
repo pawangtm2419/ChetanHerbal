@@ -1,0 +1,27 @@
+img {
+    filter: brightness( 100% ) contrast( 120% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+    opacity: .80;
+}
+.carousel-caption {
+    color: #fff;
+    padding: 20px;
+    background-color: #0c51009e;
+}
+.mat-card-css {
+    max-width: 400px;
+}
+.mat-button {
+    background-color: #0c5100;
+    color: white;
+}
+@media only screen and ( max-width: 900px) {
+    .carousel-caption {
+        position: unset;
+        color: #000;
+        background-color: transparent;
+   }
+}
+.carousel-caption {
+    bottom: auto;
+    top:20%;
+}

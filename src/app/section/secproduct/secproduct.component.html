@@ -1,0 +1,26 @@
+<section>
+  <div class="container-fluid mt-4">
+    <h3>Out Products</h3>
+    <div class="row justify-content-center mt-4">
+      <div class="col-xs-12 col-md-4 col-lg-3" *ngFor="let product of products">
+          <mat-card class="mat-card-css">
+            <mat-card-header>
+              <mat-card-title>
+                <a [routerLink]="product.purl" routerLinkActive="active">{{product.pname}}</a>
+                <span class="spacer">Price: <i class="fa fa-rupee"></i> {{product.pmrp}}</span>
+              </mat-card-title>
+              <mat-card-subtitle>{{product.pcategory}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{product.pimage}}" alt="Photo of a Blog Title">
+            <mat-card-content>
+              <p>{{product.pdetail}} <a mat-button [routerLink]="product.purl" routerLinkActive="active">Read Mode...</a></p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="addToCart(product.id)" mat-raised-button>Add to Cart <mat-icon>add_shopping_cart</mat-icon></button>
+              <button *ngIf="getLoggedIn()" mat-raised-button>Buy Now <mat-icon>payment</mat-icon></button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

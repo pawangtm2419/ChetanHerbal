@@ -1,0 +1,40 @@
+<header class="desknav">
+  <button aria-label="herbals" routerLink="/" routerLinkActive="active" mat-button><mat-icon>home</mat-icon> HOME</button>
+  <button aria-label="herbals" routerLink="/about-us" routerLinkActive="active" mat-button>ABOUT US</button>
+  <button aria-label="herbals" routerLink="/diseases" routerLinkActive="active" mat-button>DISEASE</button>
+  <button aria-label="herbals" routerLink="/products" routerLinkActive="active" mat-button>OUR PRODUCT</button>
+  <button aria-label="herbals" routerLink="/blog" routerLinkActive="active" mat-button>BLOG</button>
+  <button aria-label="herbals" routerLink="/contact-us" routerLinkActive="active" mat-button>CONTACT US</button>
+  <button *ngIf="getLoggedIn()" mat-icon-button [matMenuTriggerFor]="cart" aria-label="Example icon-button with a menu"><mat-icon matBadge="0" matBadgeColor="primary">shopping_cart</mat-icon></button>
+  <mat-menu #cart="matMenu" xPosition="before">
+    <!-- <button aria-label="herbals" routerLink="/profile" routerLinkActive="active" mat-menu-item><mat-icon>home</mat-icon><span>PROFILE</span></button> -->
+  </mat-menu>
+  <!-- <button mat-icon-button [matMenuTriggerFor]="notify" aria-label="Example icon-button with a menu"><mat-icon matBadge="0" matBadgeColor="warn">notifications</mat-icon></button>
+  <mat-menu #notify="matMenu" xPosition="before">
+    <button aria-label="herbals" routerLink="/profile" routerLinkActive="active" mat-menu-item><mat-icon>home</mat-icon><span>PROFILE</span></button>
+  </mat-menu> -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><mat-icon>more_vert</mat-icon></button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button *ngIf="getLoggedIn()" [routerLink]="['/profile/'+this.getLoggedIn()]" routerLinkActive="active" mat-menu-item><mat-icon>home</mat-icon><span>PROFILE</span></button>
+    <button *ngIf="getLoggedIn()" [routerLink]="['/setting/'+this.getLoggedIn()]" routerLinkActive="active" mat-menu-item><mat-icon>settings</mat-icon><span>SETTING</span></button>
+    <button *ngIf="!getLoggedIn()" routerLink="/login" routerLinkActive="active" mat-menu-item>LOG IN</button> 
+    <button *ngIf="getLoggedIn()" (click)="Login.getLogOut()" mat-menu-item>LOG OUT</button> 
+  </mat-menu>
+</header>
+<header class="mobnav">
+  <button *ngIf="getLoggedIn()" mat-icon-button [matMenuTriggerFor]="cart" aria-label="Example icon-button with a menu"><mat-icon matBadge="0" matBadgeColor="primary">shopping_cart</mat-icon></button>
+  <mat-menu #cart="matMenu" xPosition="before">
+    <button aria-label="herbals" routerLink="/cart-list" routerLinkActive="active" mat-menu-item><mat-icon>shopping_cart</mat-icon><span>View Cart</span></button>
+  </mat-menu>
+  <button *ngIf="getLoggedIn()" mat-icon-button [matMenuTriggerFor]="notify" aria-label="Example icon-button with a menu"><mat-icon matBadge="0" matBadgeColor="warn">notifications</mat-icon></button>
+  <mat-menu #notify="matMenu" xPosition="before">
+    <!-- <button aria-label="herbals" routerLink="/profile" routerLinkActive="active" mat-menu-item><mat-icon>home</mat-icon><span>PROFILE</span></button> -->
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><mat-icon>more_vert</mat-icon></button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button *ngIf="getLoggedIn()" [routerLink]="['/profile/'+this.getLoggedIn()]" routerLinkActive="active" mat-menu-item><mat-icon>home</mat-icon><span>PROFILE</span></button>
+    <button *ngIf="getLoggedIn()" [routerLink]="['/setting/'+this.getLoggedIn()]" routerLinkActive="active" mat-menu-item><mat-icon>settings</mat-icon><span>SETTING</span></button>
+    <button *ngIf="!getLoggedIn()" routerLink="/login" routerLinkActive="active" mat-menu-item>LOG IN</button> 
+    <button *ngIf="getLoggedIn()" (click)="Login.getLogOut()" mat-menu-item>LOG OUT</button> 
+  </mat-menu>
+</header>

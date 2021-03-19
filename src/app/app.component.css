@@ -1,0 +1,86 @@
+mat-sidenav {
+    width: 275px;
+}
+.mat-drawer, .mat-expansion-panel, .mat-expansion-panel-header-title {
+    background-color: #0c5100;
+    color: white;
+}
+.mat-toolbar-row {
+    padding: 0 !important;
+}
+.mat-toolbar.mat-primary {
+    background-color: white;
+    color: black;
+}
+.mat-list-base .mat-list-item {
+    color: white;
+}
+.mat-nav-list .mat-list-item:hover {
+    background-color:#0c5100 ;
+}
+.mat-nav-list .mat-list-item:active {
+    background-color:#0c5100 ;
+}
+.height, .sheight {
+    height: 38px !important;
+    background-color: #0c5100 !important;
+}
+.sheight a {
+    color: white;
+    padding: 0 13px;
+}
+.height a {
+    color: white;
+    padding: 0 50px;
+}
+@media only screen and (max-width: 900px) {
+    mat-sidenav {
+        width: 100%;
+    }
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+marquee {
+    color: white;
+}
+button.mat-menu-item {
+    color: white;
+}
+.mat-expansion-indicator, .mat-expansion-indicator::after, .mat-expansion-indicator::before {
+    color: white;
+}
+
+.loader {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: calc(50% - 50px);
+    transform: translateY(-50%);
+  }
+  
+  .loader:after {
+    content: ' ';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #0c5100;
+    border-color: #0c5100 transparent #0c5100 transparent;
+    animation: loader 1.2s linear infinite;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

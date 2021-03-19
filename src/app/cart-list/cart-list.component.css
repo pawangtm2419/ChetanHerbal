@@ -1,0 +1,14 @@
+.mat-raised-button:hover {
+    background-color: #0c5100;
+    color:whitesmoke;
+    transition-duration: 2.5s;
+}
+.mat-button{
+    background-color: #0c5100;
+    color: white;
+    padding: 5px 9%;
+}
+.mat-card {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

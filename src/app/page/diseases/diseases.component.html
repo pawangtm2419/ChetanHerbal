@@ -1,0 +1,13 @@
+<head> <title>Diseases : Best Health and Care Clinic : Chetan Herbals Delhi</title></head>
+<section>
+    <mat-tab-group mat-align-tabs="center"  backgroundColor="primary" >
+        <mat-tab *ngFor="let d of disease" label="{{d.dname}}">
+            <img src="{{d.dimage}}"alt="First slide">
+            <div class="carousel-caption">
+            <h4>{{d.dname}}</h4>
+                <p>{{d.ddetail}}</p>
+                <button  mat-button routerLink="{{d.durl}}" routerLinkActive="active">Read More...</button>
+              </div> 
+        </mat-tab>
+    </mat-tab-group>
+</section>

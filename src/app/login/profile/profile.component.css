@@ -1,0 +1,43 @@
+.section {
+    box-shadow: 0 5px 5px 0 #0c51003d;
+}
+h4, h2 {
+    text-align: left;
+    color: white;
+}
+mat-drawer {
+    width: 25%;
+    background-color: #172015;
+    color: white;
+    padding: 10px;
+}
+.button {
+    color: white;
+}
+.example-sidenav-content {
+    height: 100%;
+}
+.mat-icon-button {
+    background-color: #172015;
+    margin-left: -18px;
+}
+.icon {
+    padding: 0 8px;
+    color: white;
+}
+.card, mat-toolbar {
+    background-color: transparent;
+    box-shadow: 0 5px 5px 0 #0c51003d;
+    padding: 15px;
+}
+.button {
+    width: 50px;
+    padding: 6px 3px 3px 3px;
+    background-color: transparent;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.mat-menu-item {
+    color: white;
+}

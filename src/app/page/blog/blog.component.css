@@ -1,0 +1,27 @@
+
+.mat-raised-button {
+    background-color: #fff;
+    color: #104a06;
+}
+.mat-raised-button:hover {
+    background-color: #104a06;
+    color: #fff;
+    transition-duration: 2s;
+    box-shadow: 0 5px 5px 0 rgb(16, 74, 6);
+}
+
+.mat-card-css {
+    max-width: 400px;
+}
+ 
+a {
+    color: #0c5100;
+}
+a:hover {
+    text-decoration: none;
+}
+.col-lg-3 {
+    padding-right: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 30px !important;
+}

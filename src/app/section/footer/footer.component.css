@@ -1,0 +1,107 @@
+.footer-bg {
+	background-color: #242424;
+	color: white;
+}
+.page-footer a {
+	color: white;
+}
+.page-footer a:hover {
+	text-decoration: none;
+	color: #0c5100;
+}
+.hr {
+	border-top: 1px solid white;
+}
+.footer-copyright {
+	background-color: #131313;
+}
+.btn {
+	width: 100%;
+	background-color: #0c5100;
+	color: white;
+}
+h5 {
+	color: #0c5100;
+}
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+p {
+	text-align: center;
+}
+.company {
+	text-align: center;
+}
+.col-md-4 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.footer-bg {
+	background-color: #242424;
+	color: white;
+}
+.page-footer a {
+	color: white;
+}
+.page-footer a:hover {
+	text-decoration: none;
+	color: #0c5100;
+}
+.hr {
+	border-top: 1px solid #0c5100;
+}
+.footer-copyright {
+	background-color: #131313;
+}
+.btn {
+	width: 100%;
+	background-color: #0c5100;
+	color: white;
+}
+h5 {
+	color: #fff;
+}
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+p {
+	text-align: center;
+}
+.company {
+	text-align: center;
+}
+.col-md-4 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+form {
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+}
+mat-form-field, .mat-raised-button {
+	width: 100%;
+}
+.mat-raised-button {
+	color: white;
+	background-color: #0c5100;
+	font-size: larger;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.mat-raised-button:hover {
+	color: #0c5100;
+	background-color: white;
+	transition-duration: 1s;
+}
+.mat-input-element, .mat-form-field-appearance-legacy .mat-hint {
+	color: white !important;
+}
+.fa-angle-double-right {
+	color: #0c5100;
+}
+.mat-input-element, mat-label, ::placeholder {
+	color: white !important;
+}

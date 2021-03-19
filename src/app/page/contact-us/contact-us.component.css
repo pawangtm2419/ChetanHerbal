@@ -1,0 +1,91 @@
+p{
+    text-align: center;
+}
+h1,h3,h5 {
+    color: #0c5100;
+}
+.img {
+    background-color: black;
+}
+.bgcontact {
+    background-image: url("/assets/chetan-herbals-contact-us.jpg");
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: brightness( 100% ) contrast( 123% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+}
+.text {
+    padding: 3%;
+    margin-top: 50px;
+    position: relative;
+    line-height: 1.6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border: 5px solid #0c51005c;
+    background-color: #0c51005c;
+}
+.row{
+    margin-right: 0; 
+    margin-left: 0;
+}
+.btn{
+width: 100%;
+background-color: #0c5100;
+color: white;
+}
+.company{
+    line-height: 1.6;
+    text-align: center;
+    padding: 5%;
+}
+.framemap {
+    line-height: 0;
+}
+@media screen and (max-width: 775px) {
+    .bgcontact {
+        background-image: url("/assets/chetan-herbals-contact-us-mob.jpg");
+        height: 1200px;
+    }
+    .text {
+        margin-top: 20px;
+   }
+}
+mat-form-field,
+.mat-raised-button {
+	width: 100%;
+}
+.mat-raised-button {
+	color: white;
+	background-color: #0c5100;
+	font-size: larger;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.mat-raised-button:hover {
+	color: #0c5100;
+	background-color: white;
+	transition-duration: 1s;
+}
+.mat-input-element, .mat-form-field-appearance-legacy .mat-hint{
+	color: white !important;
+}
+.mat-input-element, .mat-input-element {
+    caret-color: white;
+}
+
+.mat-input-element, .mat-form-field-appearance-legacy .mat-hint{
+	color: white !important;
+}
+.fa-angle-double-right {
+	color: #0c5100;
+}
+.mat-input-element,mat-label,::placeholder {
+	color: white !important;
+}
+.mat-form-field-appearance-legacy .mat-hint {
+    color: rgb(255, 255, 255) !important;
+}

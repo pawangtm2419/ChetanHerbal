@@ -1,0 +1,24 @@
+
+.carousel-caption{
+    border: 10px solid #0c510052;
+    margin-bottom: 100px;
+}
+img {
+    filter: brightness( 100% ) contrast( 120% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+    opacity: .50;
+    
+}
+p {
+    text-align: center;
+}
+.carousel {
+    background-color: black;
+}
+.mat-button {
+    color: #0c5100;
+    background-color: #ffffff70;
+}
+.mat-button:hover {
+    background-color: #ffffff;
+    transition-duration: 1.5s;
+}

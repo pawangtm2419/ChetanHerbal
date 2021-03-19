@@ -1,0 +1,24 @@
+ .mat-toolbar-single-row {
+    height: 32px;
+}
+
+.mat-toolbar.mat-primary {
+    background-color: #0c5100;
+    color: white;
+}
+.mat-toolbar.mat-primary a {
+    background-color: #0c5100;
+    color: white;
+    padding-right: 6px;
+    padding-left: 6px;
+    text-align: center;
+    text-decoration: none;
+}
+.mat-toolbar.mat-primary a:hover {
+    background-color: white;
+    color: #0c5100;
+    text-decoration: none;
+}
+.mat-icon {
+    height: auto;
+}

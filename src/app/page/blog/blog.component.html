@@ -1,0 +1,26 @@
+<head>
+    <title>Blog : Best Health and Care Clinic : Chetan Herbals Delhi</title>
+</head>
+<section>
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" *ngFor="let blog of blogs">
+                <mat-card class="mat-card-css">
+                    <mat-card-header>
+                        <mat-card-title>{{blog.title}}</mat-card-title>
+                        <mat-card-subtitle>{{blog.categoryid}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="https://chetanclinic.com/en-img/upload/{{blog.image}}" alt="Photo of a Blog Title">
+                    <mat-card-content>
+                        <p>{{blog.description}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button><mat-icon>thumb_up</mat-icon></button>
+                        <button mat-raised-button><mat-icon>share</mat-icon></button>
+                        <button [routerLink]="['/blog/'+blog.id]" routerLinkActive="active" mat-raised-button>Read More..</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</section>

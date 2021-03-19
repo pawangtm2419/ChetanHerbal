@@ -1,0 +1,67 @@
+section{
+    padding: 15px;
+}
+button {
+    margin-right: 5px;
+}
+.mat-card {
+    margin-bottom: 15px;
+}
+.mat-card:hover{
+    box-shadow: 0 15px 15px 0 #104a06bf;
+    transition-duration: 1s;
+}
+.mat-raised-button, .mat-card-actions .mat-raised-button {
+    background-color: #104a06;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+}
+.mat-raised-button:hover {
+    background-color: #104a06;
+    color: #fff;
+    transition-duration: 2s;
+    box-shadow: 0 5px 5px 0 rgb(16, 74, 6);
+}
+.mat-card a {
+    color: #0c5100;
+}
+.mat-card a:hover {
+    text-decoration: none;
+}
+@media only screen and ( min-width: 900px) {
+    .col-md-12 {
+        width: 0;
+        padding-left: 0;
+   }
+}
+@media only screen and ( max-width: 900px) {
+    .col-md-12 {
+        width: 50%;
+        padding-left: 0;
+   }
+}
+.col-xs-12, .col-md-4, .col-lg-3 {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+.spacer {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+mat-tab-group {
+    width: 100%;
+}

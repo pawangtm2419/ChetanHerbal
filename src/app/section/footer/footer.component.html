@@ -1,0 +1,81 @@
+<footer class="page-footer font-small footer-bg pt-4">
+    <div class="container-fluid text-center text-md-left mt-4">
+            <div class="company">
+                    <h2>Chetan Herbals Pvt. Ltd. New Delhi (INDIA)</h2>
+                    <p><b>Helpline:</b> +91-9211166333, +91-9211166888 | <b>Email:</b> chetanherbals@gmail.com</p><hr class="hr">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>CHETAN CLINIC (R)</h4>
+                            <h5>(South Delhi Clinic)</h5>
+                            <p><b>Address:</b> Chetan House, BF-16, Near Sibbal Cinema <br>Badarpur, New Delhi-110044</p>
+                            <p><b>Timing:</b> Timing : 10 am to 8 pm (7 Days)</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>CHETAN CLINIC (R)</h4>
+                            <h5>(Old Delhi Clinic)</h5>
+                            <p><b>Address:</b> 3584, Netaji Subhash Marg Daryaganj <br>Near Golcha Cinema, Delhi-110002</p>
+                            <p><b>Timing:</b> Timing : 10 am to 8 pm (7 Days)</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>CHETAN HERBALS (P) LTD.</h4>
+                            <h5>(Manufacture Unit)</h5>
+                            <p><b>Address:</b> BE-1056, Plot No.12, Badkhal Extn. <br> Faridabad (HR), Pin code-121001 </p>
+                            <p><b>Timing:</b> Timing : 11 am to 5 pm (7 Days)</p>
+                        </div>
+                    </div>
+                </div><hr>
+        <div class="row">
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase">Our Products</h5><hr class="hr">
+                <ul class="list-unstyled">
+                    <li *ngFor="let p of products">&nbsp;&nbsp;<i class='fa fa-angle-double-right'></i>&nbsp;&nbsp;<a [routerLink]="p.durl" routerLinkActive="active">{{p.pname}}</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mt-md-0 mt-3">
+                <h5 class="text-uppercase">Diseases</h5><hr class="hr">
+                <ul class="list-unstyled">
+                    <li *ngFor="let d of disease">&nbsp;&nbsp;<i class='fa fa-angle-double-right'></i>&nbsp;&nbsp;<a [routerLink]="d.durl" routerLinkActive="active">{{d.dname}}</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mt-md-0">
+                <h5 class="text-uppercase">Enquiry Form</h5><hr class="hr">
+                <form [formGroup]="enquiryForm" (ngSubmit)="enquiryForm.valid && onEnquirySubmit($event)" novalidate>
+                    <div class="form-container">
+                        <mat-form-field>
+                            <mat-label>Full Name</mat-label>
+                            <input id="fullname" matInput formControlName="name" [(ngModel)]="enquiry.name" placeholder="Enter your full name" required>
+                            <mat-error *ngIf="enquiryForm.get('name').hasError('required')">Full Name must be Required. </mat-error>
+                        </mat-form-field><br>
+                        <mat-form-field hintLabel="Max 10 characters">
+                            <mat-label>Mobile Number</mat-label>
+                            <input id="unumber" matInput formControlName="mobilenumber" [(ngModel)]="enquiry.mobilenumber" #input maxlength="10" placeholder="Enter Mobile Number" required>
+                            <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                            <mat-error *ngIf="enquiryForm.get('mobilenumber').hasError('required')">Mobile Number must be Required. </mat-error>
+                            <mat-error *ngIf="enquiryForm.get('mobilenumber').hasError('minlength')">Mobile Number must be 10 Digits. </mat-error>
+                            <mat-error *ngIf="enquiryForm.get('mobilenumber').hasError('pattern')">Mobile Number must be Number. </mat-error>
+                        </mat-form-field><br>
+                        <mat-form-field>
+                            <mat-label>Email Address</mat-label>
+                            <input id="email" matInput formControlName="email" [(ngModel)]="enquiry.email" placeholder="Enter your email">
+                            <mat-error *ngIf="enquiryForm.get('email').hasError('pattern')">Enter a valid Mail. </mat-error>
+                        </mat-form-field><br>
+                        <mat-form-field>
+                            <mat-label>Enquiry Question</mat-label>
+                            <textarea matInput formControlName="question" [(ngModel)]="enquiry.question" placeholder="Enter your Enquiry Question" required></textarea>
+                            <mat-error *ngIf="enquiryForm.get('question').hasError('required')">Enquiry Question must be Required. </mat-error>
+                        </mat-form-field><br><br>
+                        <button mat-button type="submit" class="mat-raised-button mat-primary" [disabled]="!enquiryForm.valid">Send</button>
+                    </div>
+                </form>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5 class="text-uppercase">Our Location</h5><hr class="hr">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14007.069981370245!2d77.3027742!3d28.6367297!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7799a375af8e905f!2sCHETAN%20HERBALS!5e0!3m2!1sen!2sin!4v1576056432839!5m2!1sen!2sin" width="100%" height="350" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">Copyright © 2015 : All Rights Reserved by
+        <a href=""> chetanherbals.com</a>
+    </div>
+</footer>

@@ -1,0 +1,30 @@
+<mat-drawer-container autosize>
+    <mat-drawer #drawer mode="side" opened>
+        <div *ngFor="let user of user">
+            <h3 class="text-center">Use Profile</h3>
+            <div class="card">
+                <mat-toolbar>
+                    <h2>{{user.username}}</h2>
+                    <span class="toolbar-spacer"></span>
+                    <button mat-button class="button" (click)="editprofile = !editprofile" (click)="cart = !cart">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </mat-toolbar><br>
+                <h4>{{user.unumber}}</h4>
+                <p><strong>Email ID: </strong>{{user.umail}}</p>
+                <p><strong>Complete Address: </strong>{{user.ustreat}} {{user.uadd1}}<br>{{user.uadd2}}, {{user.uaddnearby}}, <br><strong>Pin Code: </strong>{{user.uaddpincode}}</p>
+            </div>
+            <button (click)="cart = !cart" (click)="editprofile = !editprofile" mat-menu-item>Cart List</button>
+            <button (click)="editprofile = !editprofile" (click)="cart = !cart" mat-menu-item>Edit Profile</button>
+            <button routerLink="'/changepassword'" routerLinkActive="active" mat-menu-item>Change Password</button><br><br>
+        </div>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <button type="button" mat-icon-button (click)="drawer.toggle()" (click)="show = !show">
+            <mat-icon class="icon">{{show ? 'navigate_before' : 'navigate_next'}}</mat-icon>
+        </button>
+    </div>
+    <app-cart-list *ngIf="cart"></app-cart-list>
+    <app-edit-profile *ngIf="editprofile"></app-edit-profile>
+    <br><br><br><br><br><br><br><br>
+</mat-drawer-container>

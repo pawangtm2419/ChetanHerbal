@@ -1,0 +1,29 @@
+section{
+    padding: 15px;
+}
+button {
+    margin-right: 5px;
+}
+.card {
+    margin-bottom: 15px;
+}
+.card:hover{
+    box-shadow: 0 5px 5px 0 rgba(16, 74, 6, 0.31);
+    background-color: #104a0617;
+    transition-duration: 1s;
+}
+.mat-raised-button {
+    background-color: #fff;
+    color: #104a06;
+}
+.mat-raised-button:hover {
+    background-color: #104a06;
+    color: #fff;
+    transition-duration: 2s;
+    box-shadow: 0 5px 5px 0 rgb(16, 74, 6);
+}
+
+.mat-card-css {
+    max-width: 100%;
+    margin-bottom: 15px;
+}

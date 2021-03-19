@@ -1,0 +1,31 @@
+.bg-color {
+    color: white;
+}
+p {
+    text-align: center;
+    padding: 5%;
+}
+.bg-color {
+    background-color: #0c510075;
+}
+.carousel-indicators li {
+    width: 8%;
+    background-color: #0c5100;
+}
+.itembgcolor {
+    background-color:#0c510075 ;
+    padding: 2%;
+    margin-top: 8%;
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 10%;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    height: 50px;
+    width: 50px;
+}
+.mat-raised-button:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #0c5100;
+}

@@ -1,0 +1,43 @@
+<section *ngFor="let user of user">
+    <div class="container">
+        <div class="row">
+          <h1>{{user.username}} ( {{user.unumber}} )</h1>
+        </div>
+      <div class="row">
+          <form [formGroup]="updateRegisterForm" (ngSubmit)="updateRegisterForm.valid && onRegisterUpdate($event)" novalidate>
+              <div class="form-container">
+                <mat-form-field>
+                  <mat-label>Full Name</mat-label>
+                  <input id="fullname" matInput formControlName="name" [(ngModel)]="reguser.name" [(ngModel)]="user.username" placeholder="Enter your full name" required>
+                </mat-form-field><br>
+                <mat-form-field>
+                  <mat-label>Email Address</mat-label>
+                    <input id="email" matInput formControlName="email" [(ngModel)]="reguser.email" [(ngModel)]="user.umail" placeholder="Enter your email">
+                  </mat-form-field><br>
+                    <mat-form-field>
+                      <mat-label>Streat / Area Name</mat-label>
+                      <input matInput formControlName="streatname" [(ngModel)]="reguser.streatname" [(ngModel)]="user.ustreat" placeholder="Enter Streat / Area Name" required>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                      <mat-label>Address 1</mat-label>
+                      <textarea matInput formControlName="address1" [(ngModel)]="reguser.address1" [(ngModel)]="user.uadd1" placeholder="Enter your complete Address" required></textarea>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                      <mat-label>Address 2</mat-label>
+                      <textarea matInput formControlName="address2" [(ngModel)]="reguser.address2" [(ngModel)]="user.uadd2" placeholder="Enter your complete Address" required></textarea>
+                    </mat-form-field><br>
+                    <mat-form-field>
+                      <mat-label>Near By Location</mat-label>
+                      <textarea matInput formControlName="nearby" [(ngModel)]="reguser.nearby" [(ngModel)]="user.uaddnearby" placeholder="Enter Near By Location" required></textarea>
+                    </mat-form-field><br>
+                    <mat-form-field hintLabel="Max 6 characters">
+                      <mat-label>Pin Code</mat-label>
+                      <input matInput formControlName="pincode" [(ngModel)]="reguser.pincode" [(ngModel)]="user.uaddpincode" #input maxlength="6" placeholder="Enter Pin Code" required>
+                      <mat-hint align="end">{{input.value?.length || 0}}/6</mat-hint>
+                    </mat-form-field><br><br>
+                  <button mat-button type="submit" [disabled]="!updateRegisterForm.valid" class="mat-raised-button mat-primary">Update</button>
+              </div>
+            </form>
+      </div>
+  </div>
+</section>

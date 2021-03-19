@@ -1,0 +1,70 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" position="start">
+    <mat-nav-list>
+      <a (click)="sidenav.toggle()" mat-menu-item><mat-icon>close</mat-icon> Close</a>
+      <a routerLink="/" routerLinkActive="active" (click)="sidenav.toggle()" mat-list-item><mat-icon>home</mat-icon> HOME</a>
+      <a routerLink="/about-us" routerLinkActive="active" (click)="sidenav.toggle()" mat-list-item>ABOUT US</a>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>DISEASES</mat-panel-title>
+          </mat-expansion-panel-header>
+          <button *ngFor="let d of disease" aria-label="herbals" [routerLink]="d.durl" routerLinkActive="active" (click)="sidenav.toggle()" mat-menu-item>{{d.dname}}</button>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title >PRODUCT</mat-panel-title>
+          </mat-expansion-panel-header>
+          <button *ngFor="let p of products" aria-label="herbals" [routerLink]="p.purl" routerLinkActive="active" (click)="sidenav.toggle()" mat-menu-item>{{p.pname}}</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <a routerLink="/blog" routerLinkActive="active" (click)="sidenav.toggle()" mat-list-item>BLOG</a>
+      <a routerLink="/contact-us" routerLinkActive="active" (click)="sidenav.toggle()" mat-list-item>CONTACT US</a>
+      <a *ngIf="!getLoggedIn()" routerLink="/login" (click)="sidenav.toggle()" routerLinkActive="active"  mat-list-item>LOG IN</a> 
+      <a *ngIf="getLoggedIn()" [routerLink]="['/profile/'+this.getLoggedIn()]" (click)="sidenav.toggle()" routerLinkActive="active"  mat-list-item>USER PROFILE</a> 
+      <a *ngIf="getLoggedIn()" [routerLink]="['/setting/'+this.getLoggedIn()]" (click)="sidenav.toggle()" routerLinkActive="active"  mat-list-item>PROFILE SETTING</a> 
+      <a *ngIf="getLoggedIn()" (click)="Login.getLogOut()"  mat-menu-item>LOG OUT</a> 
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-top-header></app-top-header>
+    <mat-toolbar color="primary" class="sticky-top">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        <a routerLink="/" routerLinkActive="active"  mat-list-item><img src="./assets/logo-chetan-herbals.png" alt=""></a>
+        <span class="toolbar-spacer"></span>
+        <app-header></app-header>
+      </mat-toolbar-row>
+      <div class="mobnav">
+        <mat-toolbar-row class="sheight mobnav">
+          <a href="tel:9211166333"><mat-icon class="fa fa-phone" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="https://goo.gl/maps/h6grYvwW69MxWQQJ8" target="_blank"><mat-icon class="fa fa-map-marker" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="mailto:chetanherbals@gamil.com" target="_blank"><mat-icon class="fa fa-envelope" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="https://chat.whatsapp.com/IuPPazKCTbZ6PlWwjvu9Me" target="_blank"><mat-icon class="fa fa-whatsapp" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="https://www.facebook.com/chetanherbalsclinic/" target="_blank"><mat-icon class="fa fa-facebook-square" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="https://twitter.com/ChetanHerbals" target="_blank"><mat-icon class="fa fa-twitter-square" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="https://www.instagram.com/chetanherbals" target="_blank"><mat-icon class="fa fa-instagram" aria-hidden="false" aria-label="heart icon"></mat-icon></a><span class="toolbar-spacer"></span>
+          <a href="https://in.pinterest.com/chetanherbals/" target="_blank"><mat-icon class="fa fa-pinterest-square" aria-hidden="false" aria-label="heart icon"></mat-icon></a>
+        </mat-toolbar-row>
+        <mat-toolbar-row class="height">
+          <a aria-label="herbals" routerLink="/diseases" routerLinkActive="active" mat-button>Diseases</a>
+          <span class="toolbar-spacer"></span>
+          <a aria-label="herbals" routerLink="/products" routerLinkActive="active" mat-button>Products</a>
+        </mat-toolbar-row>
+      </div>
+    </mat-toolbar>
+    <mat-toolbar color="primary" class="height" *ngFor="let w of wish">
+      <marquee>{{w.wish}}</marquee >
+    </mat-toolbar>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-secslider *ngIf="router.url == '/'"></app-secslider>
+    <app-secabout *ngIf="router.url == '/'"></app-secabout>
+    <app-secproduct *ngIf="router.url != '/about-us'  && router.url != '/login' && router.url != '/contact-us' && router.url != '/blog'"></app-secproduct>
+    <app-secdisease *ngIf="router.url != '/about-us' && router.url != '/contact-us'  && router.url != '/login' && router.url != '/blog' &&router.url != '/diseases'"></app-secdisease>
+    <app-secblog *ngIf="router.url != '/login' && router.url != '/blog'"></app-secblog>
+    <app-review *ngIf="router.url != '/login'"></app-review>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
